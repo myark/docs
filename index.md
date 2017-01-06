@@ -7,8 +7,8 @@ layout: docs
 
 <div class="container padding-top-40 padding-bottom-50" data-nav-waypoint>
   <div class="copy-block">
-      <h3 class="h3 h3--blue margin-bottom-10">你将会懂更多。</h3>
-      <p class="margin-top-10">我们针对每个开发平台都做了对应的文档，应该能帮到找到你所需要的答案。你还可以查看更加详细的API参考文档和教程，以便更好地了解它是如何组合在一起的。</p>
+      <h3 class="h3 h3--blue margin-bottom-10">你将会了解更多。</h3>
+      <p class="margin-top-10">我们针对每个开发平台都做了相关的文档，这里应该能帮你找到所寻找的答案。你还可以查看更详细的API参考文档和指南，以便更好地了解它是如何一起组合工作的。</p>
   </div>
 
   <div class="docs-platforms">
