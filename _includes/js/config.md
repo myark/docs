@@ -18,7 +18,7 @@ Parse.Config.get().then(function(config) {
 
 ## 检索配置
 
-`ParseConfig'被建立为尽可能的鲁棒和可靠，即使面对不良的互联网连接。 默认情况下使用缓存，以确保最新成功获取的配置始终可用。 在下面的例子中，我们使用`get`从服务器检索最新版本的config，如果fetch失败了，我们可以简单地回到我们通过`current`获取的版本。
+`ParseConfig`被建立为尽可能的鲁棒和可靠，即使面对不良的互联网连接。 默认情况下使用缓存，以确保最新成功获取的配置始终可用。 在下面的例子中，我们使用`get`从服务器检索最新版本的config，如果fetch失败了，我们可以简单地回到我们通过`current`获取的版本。
 <!-- `ParseConfig` is built to be as robust and reliable as possible, even in the face of poor internet connections. Caching is used by default to ensure that the latest successfully fetched config is always available. In the below example we use `get` to retrieve the latest version of config from the server, and if the fetch fails we can simply fall back to the version that we successfully fetched before via `current`. -->
 
 <pre><code class="javascript">
