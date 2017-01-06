@@ -1,5 +1,5 @@
 ---
-title: JavaScript Developers Guide | Parse
+title: JavaScript开发指南 | Parse
 permalink: /js/guide/
 layout: guide
 platform: js
