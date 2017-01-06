@@ -1,4 +1,4 @@
-# 入门
+<h1 id="getting-started">入门</h1>
 
 如果您尚未设置项目，请转到[快速开始指南]({{page.quickstart}}＃js/native/blank)启动并运行。 您还可以查看我们的[API参考](/Parse-SDK-JS/api/)有关我们的SDK的更多详细信息。
 <!-- If you haven't set up your project yet, please [head over to the QuickStart guide]({{ page.quickstart }}#js/native/blank) to get up and running. You can also check out our [API Reference](/Parse-SDK-JS/api/) for more detailed information about our SDK. -->
