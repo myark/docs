@@ -20,7 +20,7 @@ Parse平台为您的移动应用程序提供完整的后端解决方案。 我�
 要用Javascript初始化你自己的Parse-Server，你应该用这个替换你当前的初始化代码
 <!-- To initialize your own Parse-Server with Javascript, you should replace your current initialization code with this -->
 
-``` javascript
+```
 Parse.initialize("YOUR_APP_ID");
 Parse.serverURL = 'http://YOUR_PARSE_SERVER:1337/parse'
 ```
