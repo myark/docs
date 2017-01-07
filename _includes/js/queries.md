@@ -211,7 +211,7 @@ query.equalTo("arrayKey", 2);
 query.containsAll("arrayKey", [2, 3, 4]);
 </code></pre>
 
-## Queries on String Values
+<h2 id="queries-on-string-values">对字符串值的查询</h2>
 
 <div class='tip info'><div>
  如果您尝试实施通用搜索功能，我们建议您查看此博文：<a href="http://blog.parse.com/learn/engineering/implementing-scalable-search-on-a-nosql-backend/">Implementing Scalable Search on a NoSQL Backend</a>.
