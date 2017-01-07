@@ -1,40 +1,5 @@
-# Parse Docs
+# Parse中文文档
+> 本文档由本人一时兴起而译。    
+> 采用谷歌翻译进行半人工转换，有很多不通的地方请谅解。
 
-These are the markdown sources for all of the [Parse SDK guides](https://parseplatform.github.io/#sdks). The content for the guides is stored in this repo, and we use Jekyll to generate a static site that is hosted on GitHub Pages.
-
-## Repository Structure
-
-The guides are organized by platform. Each platform directory contains a set of markdown files, one for each main section in the guide.
-
-    .
-    ├── {platform}
-    │   └── {section}
-    └── common
-        └── {section}
-
-For example, `/ios/` contains all of sections for the iOS guide. There is also a `common` folder that contains content that is shared amongst all of the guides. It helps us avoid duplicating content unnecessarily.
-
-## Can I Access The Docs Offline?
-
-This repository is public and all the files are in markdown. If you'd like to keep a copy locally, please do!
-
-## How Do I Contribute?
-
-If you have any fixes or suggestions, simply send us a pull request!
-
-### Running The Site Locally
-
-Clone this repository, then install Jekyll and node packages:
-
-```
-bundle install
-npm install
-```
-
-Then run webpack and Jekyll:
-
-```
-npm start
-```
-
-Finally, open http://localhost:4000/docs/ios/guide/ in your web browser.
+主要翻译[js指南](https://myark.github.io/parse-doc-zh/js/guide/)部分，至于其他sdk，如果你有兴趣，也可以加入参与。
