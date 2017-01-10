@@ -19,45 +19,55 @@
 我们在这里将会详细介绍每一个用户方法的各种用例。
 
 
-## 注册
-你的应用程序会做的第一件事可能是要求用户注册。 以下代码说明了典型的注册：
-<!-- 
-The first thing your app will do is probably ask the user to sign up. The following code illustrates a typical sign up: -->
+<h2 id="users-signup">注册</h2>
 
-<pre><code class="javascript">
+你的程序会做的第一件事可能是要求用户进行注册。 
+以下代码是典型的注册用例：
+
+``` javascript
 var user = new Parse.User();
 user.set("username", "my name");
 user.set("password", "my pass");
 user.set("email", "email@example.com");
 
 // other fields can be set just like with Parse.Object
+// 其他字段可以像Parse.Object一样进行设置
 user.set("phone", "415-392-0202");
 
 user.signUp(null, {
   success: function(user) {
     // Hooray! Let them use the app now.
+    // 注册成功！让用户开始使用应用吧！
   },
   error: function(user, error) {
     // Show the error message somewhere and let the user try again.
+    // 如果发生错误，在某处显示错误信息并让用户重新尝试注册
     alert("Error: " + error.code + " " + error.message);
   }
 });
-</code></pre>
+```
 
-此调用将在Parse App中异步创建一个新用户。在这之前，它还检查以确保用户名和电子邮件是唯一的。此外，它使用bcrypt在云中安全地密码密码。我们从不以明文存储密码，也不会以明文将密码传回客户端。
+这个操作将会在你的Parse应用中异步创建一个新用户。
+在此之前，它还会进行检查以确保用户名和邮件地址是唯一的。
+此外，它在云服务器中使用了`bcrypt`进行密码的安全加密。
+我们从不使用明文密码进行存储，也不会将明文密码发送到客户端。
 
-注意，我们使用`signUp`方法，而不是`save`方法。新的`Parse.User`s应该始终使用`signUp`方法创建。用户的后续更新可以通过调用`save`来完成。
 
-如果注册失败，您应该读取返回的错误对象。最可能的情况是用户名或电子邮件已被另一个用户占用。您应该向用户明确告知，并要求他们尝试不同的用户名。
+注意，这里我们使用`signUp`而不是`save`方法。
+新的`Parse.User`应该始终使用`signUp`方法创建。
+用户在后边更新数据的话可以使用`save`方法来进行更新。
 
-您可以使用电子邮件地址作为用户名。只需要您的用户输入他们的电子邮件，但填写用户名属性＆mdash; `Parse.User`将正常工作。我们将在重置密码部分中讨论如何处理。
-<!-- This call will asynchronously create a new user in your Parse App. Before it does this, it also checks to make sure that both the username and email are unique. Also, it securely hashes the password in the cloud using bcrypt. We never store passwords in plaintext, nor will we ever transmit passwords back to the client in plaintext.
 
-Note that we used the `signUp` method, not the `save` method. New `Parse.User`s should always be created using the `signUp` method. Subsequent updates to a user can be done by calling `save`.
+如果注册失败，您应该读取返回的错误信息对象。
+最可能的情况是用户名或邮件地址已被注册过。
+您应该向用户明确告知该情况，并要求他们尝试使用不同的用户名或邮件进行注册。
 
-If a signup isn't successful, you should read the error object that is returned. The most likely case is that the username or email has already been taken by another user. You should clearly communicate this to your users, and ask them try a different username.
 
-You are free to use an email address as the username. Simply ask your users to enter their email, but fill it in the username property &mdash; `Parse.User` will work as normal. We'll go over how this is handled in the reset password section. -->
+您可以使用电子邮件地址作为用户名。
+只需要您的用户输入他们的邮件地址，但请把该地址填写到`username`属性中，这样`Parse.User`才会正常工作。
+我们将在重置密码部分中讨论如何进行处理。
+
+
 
 ## 登录
 当然，在您允许用户注册后，您需要让他们以后登录他们的帐户。 要做到这一点，你可以使用类方法`logIn`。
