@@ -1,15 +1,14 @@
 <h1 id="users">用户</h1>
 
-在许多应用程序的核心，有一个用户帐户的概念，让用户以安全的方式访问他们的信息。 我们提供了一个名为`Parse.User`的专门用户类，它自动处理用户帐户管理所需的大部分功能。
-<!-- At the core of many apps, there is a notion of user accounts that lets users access their information in a secure manner. We provide a specialized user class called `Parse.User` that automatically handles much of the functionality required for user account management. -->
+许多应用的核心部分，都有一个用户账号的概念，以便用户安全地访问他们都信息。
+我们为此提供了一个`Parse.User`的用户管理类，它能自动完成用户账号管理中所需要的大部分功能。
 
-使用此类，您可以在应用中添加用户帐户功能。
-<!-- With this class, you'll be able to add user account functionality in your app. -->
+使用此类，您可以在应用中添加用户账号管理功能。
 
-`Parse.User`是`Parse.Object`的子类，并且具有所有相同的功能，如灵活模式，自动持久性和键值接口。 `Parse.Object`中的所有方法也存在于`Parse.User`中。 区别是`Parse.User`有一些特殊的添加到用户帐户。
-<!-- `Parse.User` is a subclass of `Parse.Object`, and has all the same features, such as flexible schema, automatic persistence, and a key value interface. All the methods that are on `Parse.Object` also exist in `Parse.User`. The difference is that `Parse.User` has some special additions specific to user accounts.
- -->
-## 属性
+`Parse.User`是`Parse.Object`的子类，并且具有所有相同的功能，比如灵活的架构、自动持久性和key-value设计接口。 
+`Parse.Object`中的所有方法也存在于`Parse.User`中。 区别是`Parse.User`有一些特殊的附加方法来管理用户帐户。
+
+<h2 id="users-property">属性</h2>
 
 `Parse.User`有几个值将它从`Parse.Object`中分离出来：
 
@@ -17,9 +16,9 @@
 *   password: 用户的密码（注册时需要）。
 *   email: 用户的电子邮件地址（可选）。
 
-当我们遍历用户的各种用例时，我们将详细介绍每一个。
-<!-- We'll go through each of these in detail as we run through the various use cases for users.
- -->
+我们在这里将会详细介绍每一个用户方法的各种用例。
+
+
 ## 注册
 你的应用程序会做的第一件事可能是要求用户注册。 以下代码说明了典型的注册：
 <!-- 
