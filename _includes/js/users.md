@@ -69,21 +69,23 @@ user.signUp(null, {
 
 
 
-## 登录
-当然，在您允许用户注册后，您需要让他们以后登录他们的帐户。 要做到这一点，你可以使用类方法`logIn`。
-<!-- 
-Of course, after you allow users to sign up, you need to let them log in to their account in the future. To do this, you can use the class method `logIn`. -->
+<h2 id="users-login">登录</h2>
 
-<pre><code class="javascript">
+当然，在您允许用户注册后，您需要让他们在以后进行登录。 要完成这个操作，你可以使用类方法`logIn`。
+
+``` javascript
 Parse.User.logIn("myname", "mypass", {
   success: function(user) {
     // Do stuff after successful login.
+    // 登录成功后的回调函数
   },
   error: function(user, error) {
     // The login failed. Check error to see why.
+    // 登录失败，可以进行失败信息展示
   }
 });
-</code></pre>
+```
+
 
 ## 验证邮箱
 
